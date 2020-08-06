@@ -2,6 +2,7 @@ package com.cos.spring.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,11 +16,8 @@ import com.cos.spring.model.User;
 @CrossOrigin
 public class PublicRestApiController {
 	
+	@Autowired
 	private UserRepository userRepository;
-
-	public PublicRestApiController(UserRepository userRepository) {
-		this.userRepository = userRepository;
-	}
 	
 	
 	// Available to all authenticated users
